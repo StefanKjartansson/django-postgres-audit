@@ -4,6 +4,7 @@ python:
 
 before_script:
   - psql -c 'create database djpgtrigger_test;' -U postgres
+  - psql -c 'create extension if not exists hstore;' -U postgres -d djpgtrigger_test
 
 install:
   - pip install -r requirements.txt
