@@ -1,6 +1,8 @@
 django-postgres-audit
 =====================
 
+.. image:: https://secure.travis-ci.org/StefanKjartansson/django-postgres-audit.png
+
 django-postgres-audit provides trigger based audit logging for django models.
 
 Using django-postgres-audit
