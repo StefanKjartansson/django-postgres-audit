@@ -1,0 +1,12 @@
+*.py[oc]
+*.swp
+*.log
+*.db
+*.tar.gz
+*.egg-info/
+build/
+dist/
+env/
+.DS_Store
+.noseids
+.coverage
