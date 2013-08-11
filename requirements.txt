@@ -4,4 +4,3 @@ djorm-ext-core==0.4.3
 djorm-ext-expressions==0.5
 djorm-ext-hstore==0.5
 psycopg2==2.5.1
-wsgiref==0.1.2
