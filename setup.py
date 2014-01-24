@@ -37,17 +37,17 @@ class RunTests(Command):
         testproj_dir = os.path.join(this_dir, 'tests')
         os.chdir(testproj_dir)
         sys.path.append(testproj_dir)
-        from django.core.management import execute_manager
+        from django.core.management import execute_from_command_line as cli
         os.environ['DJANGO_SETTINGS_MODULE'] = os.environ.get(
                         'DJANGO_SETTINGS_MODULE', 'settings')
-        settings_file = os.environ['DJANGO_SETTINGS_MODULE']
-        settings_mod = __import__(settings_file, {}, {}, [''])
+
         prev_argv = list(sys.argv)
         try:
             sys.argv = [__file__, 'test', 'pgaudit', 'someapp'] + self.extra_args
-            execute_manager(settings_mod, argv=sys.argv)
+            cli(sys.argv)
         finally:
             sys.argv = prev_argv
+        os.chdir(this_dir)
 
     def initialize_options(self):
         pass
