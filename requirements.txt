@@ -1,4 +1,4 @@
-Django==1.6.1
+Django==1.6.2
 South==0.8.4
 djorm-ext-core==0.7
 djorm-ext-expressions==0.6
